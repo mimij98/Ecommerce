@@ -62,6 +62,9 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+# SQLite databases (including local/scraped data)
+*.db
+
 # Flask stuff:
 instance/
 .webassets-cache
@@ -103,8 +106,9 @@ ipython_config.py
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, poetry may install dependencies that don't work, or not
+#   install all needed dependencies.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 # poetry.lock
 # poetry.toml
@@ -153,8 +157,8 @@ activemq-data/
 .env
 .envrc
 .venv
-env/
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
@@ -189,7 +193,7 @@ cython_debug/
 # PyCharm
 #   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#   and can be added to the global gitignore or merged into this file.  For a more nuclear
+#   and can be added to the global gitignore or merged into this file. For a more nuclear
 #   option (not recommended) you can uncomment the following to ignore the entire idea folder.
 # .idea/
 
@@ -221,3 +225,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# macOS
+.DS_Store
